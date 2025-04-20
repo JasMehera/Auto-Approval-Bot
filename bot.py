@@ -26,7 +26,7 @@ async def approve(_, m : Message):
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
-        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @Union_Bots __**".format(m.from_user.mention, m.chat.title))
+        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @Anime_Union_Bots __**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -55,7 +55,7 @@ async def op(_, m :Message):
         return 
     keyboard = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton("🗯 Channel", url="https://t.me/Union_Bots"),
+            InlineKeyboardButton("🗯 Channel", url="https://t.me/Anime_Union_Bots"),
             InlineKeyboardButton("💬 Support", url="https://t.me/Weebs_Union")
         ]]
     )
@@ -74,7 +74,7 @@ async def chk(_, cb : CallbackQuery):
         return 
     keyboard = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton("🗯 Channel", url="https://t.me/Union_Bots"),
+            InlineKeyboardButton("🗯 Channel", url="https://t.me/Anime_Union_Bots"),
             InlineKeyboardButton("💬 Support", url="https://t.me/Weebs_Union")
         ]]
     )
