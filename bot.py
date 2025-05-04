@@ -26,7 +26,7 @@ async def approve(_, m : Message):
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
-        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @Anime_Union_Bots __**".format(m.from_user.mention, m.chat.title))
+        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @Union_Botss __**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -47,15 +47,15 @@ async def op(_, m :Message):
             return 
         key = InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton("<blockquote><b>ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ</blockquote>", url=invite_link.invite_link),
-                InlineKeyboardButton("<blockquote><b🍀ᴄʜᴇᴄᴋ ᴀɢᴀɪɴ 🍀</blockquote>", callback_data="chk")
+                InlineKeyboardButton("<b>ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link),
+                InlineKeyboardButton("<b🍀ᴄʜᴇᴄᴋ ᴀɢᴀɪɴ 🍀", callback_data="chk")
             ]]
         ) 
         await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join My Update Channel To Use Me.If You Joined The Channel Then Click On Check Again Button To Confirm.**", reply_markup=key)
         return 
     keyboard = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton("🗯 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Anime_Union_Bots"),
+            InlineKeyboardButton("🗯 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Union_Botss"),
             InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ", url="https://t.me/Weebs_Union")
         ]]
     )
@@ -74,12 +74,12 @@ async def chk(_, cb : CallbackQuery):
         return 
     keyboard = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton("🗯 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Anime_Union_Bots"),
+            InlineKeyboardButton("🗯 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Union_Botss"),
             InlineKeyboardButton("💬 Support", url="https://t.me/Weebs_Union")
         ]]
     )
     add_user(m.from_user.id)
-    await cb.edit_text(text="**<blockquote><b>🦊 ʜᴇʟʟᴏ {}!\nɪ ᴀᴍ ᴀɴ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ [ᴀᴅᴍɪɴ ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛs]({}) ʙᴏᴛ.</blockquote>\n<blockquote><b>ɪ ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ᴜsᴇʀs ɪɴ ɢʀᴏᴜᴘs/ᴄʜᴀɴɴᴇʟs.ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴀᴅᴅ ᴍᴇᴍʙᴇʀs ᴘᴇʀᴍɪssɪᴏɴ.</blockquote>.\n\n__Powered By : @Union_Bots __**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+    await cb.edit_text(text="**<blockquote><b>🦊 ʜᴇʟʟᴏ {}!\nɪ ᴀᴍ ᴀɴ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ [ᴀᴅᴍɪɴ ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛs]({}) ʙᴏᴛ.</blockquote>\n<blockquote><b>ɪ ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ᴜsᴇʀs ɪɴ ɢʀᴏᴜᴘs/ᴄʜᴀɴɴᴇʟs.ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴀᴅᴅ ᴍᴇᴍʙᴇʀs ᴘᴇʀᴍɪssɪᴏɴ.</blockquote>.\n\n__Powered By : @Union_Botss __**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
     
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
